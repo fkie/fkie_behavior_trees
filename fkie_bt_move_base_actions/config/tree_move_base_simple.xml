@@ -1,0 +1,20 @@
+<root main_tree_to_execute="bt_navigation">
+  <BehaviorTree ID="bt_navigation">
+    <SwitchClientStop name="mbf">
+      <Sequence name="Main loop">
+        <Fallback name="Goal Definition">
+          <Condition ID="ValidPose" name="ValidPose" target_pose="{target_pose}"/>
+          <Action ID="PoseReceived" name="mbf_goal" target_pose="{target_pose}"/>
+        </Fallback>
+        <Sequence name="Navigation">
+          <Action ID="ServiceEmptyAction" name="clear_costmap"/>
+          <Action ID="MoveBase_GetPath" name="Global planner" planner="GlobalPlanner" target_pose="{target_pose}" path="{path}"/>
+          <Fallback>
+            <Action ID="MoveBase_ExePathSync" name="Local planner" controller="dwa_fkie" path="{path}" target_pose="{target_pose}"/>
+            <Action ID="MoveBase_Recovery" name="Recovery" strategy="move_slow_and_clear_fkie"/>
+          </Fallback>
+        </Sequence>
+      </Sequence>
+    </SwitchClientStop>
+  </BehaviorTree>
+</root>

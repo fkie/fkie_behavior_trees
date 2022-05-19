@@ -1,0 +1,16 @@
+<launch>
+  <!-- Simplify ROS console output -->
+  <env name="ROSCONSOLE_FORMAT" value="${logger}: ${message}"/>
+
+  <!-- launch Groot: Assumes that executable is located at ~/ros/external/Groot/build/Groot -->
+  <node name="load_groot" pkg="fkie_behavior_tree_manager" type="run_groot.sh" output="screen"/>
+
+  <!-- load behavior tree manager -->
+  <node name="bt_manager" pkg="fkie_behavior_tree_manager" type="behavior_tree_manager_node" clear_params="true" output="screen">
+    <!-- Load tree XML file -->
+    <param name="tree/static_file" value="$(find fkie_bt_tutorials)/config/hello_world_tree.xml"/>
+
+    <!-- Load parameters -->
+    <rosparam command="load" file="$(find fkie_bt_tutorials)/config/hello_world_config.yaml" />
+  </node>
+</launch>

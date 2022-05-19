@@ -1,0 +1,14 @@
+<root main_tree_to_execute="BehaviorTree">
+  <BehaviorTree ID="BehaviorTree">
+    <Sequence name="Main loop">
+      <!-- Execute action without defining ports -->
+      <Action ID="HelloWorldAction" name="hello_world_no_message_in" />
+
+      <!-- Execute action with constant [message_in] value -->
+      <Action ID="HelloWorldAction" name="hello_world_constant_message_in" message_in="Hi constant World" message_out="{message_out}"/>
+
+      <!-- Syntax: message_out="{message_out}" remaps ports -->
+      <Action ID="HelloWorldAction" name="hello_world_message_port" message_in="{message_out}" message_out="{message_out}"/>
+    </Sequence>
+  </BehaviorTree>
+</root>

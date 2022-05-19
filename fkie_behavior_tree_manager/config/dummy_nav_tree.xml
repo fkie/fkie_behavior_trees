@@ -1,0 +1,9 @@
+<root main_tree_to_execute="BehaviorTree">
+  <BehaviorTree ID="BehaviorTree">
+    <Sequence name="Dummy Navigation loop example">
+      <DelayAction name="global_path" delay_time="1.0" />
+      <DelayAction name="navigate_to_path" delay_time="1.0" />
+    </Sequence>
+  </BehaviorTree>
+</root>
+

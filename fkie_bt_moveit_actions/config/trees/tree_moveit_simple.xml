@@ -1,0 +1,5 @@
+<root main_tree_to_execute="BehaviorTree">
+  <BehaviorTree ID="BehaviorTree">
+    <Action ID="MoveitExecuteWaypoints" name="MoveitExecuteWaypoints"/>
+  </BehaviorTree>
+</root>

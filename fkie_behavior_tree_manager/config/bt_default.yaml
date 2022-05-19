@@ -1,0 +1,30 @@
+tree:
+  static_xml: ""
+  # static_file: ""
+  rate : 2.0
+  start_tree_at_init: True
+
+logging:
+  RosMsgLogger:
+    enabled: true
+  StdCoutLogger:
+    enabled: false
+  PublisherZMQ:
+    enabled: true
+    max_msg_per_second: 25
+    publisher_port: 1666
+    server_port: 1667
+  FileLogger:
+    enabled: false
+    file_path: "bt_trace.fbl"
+  MinitraceLogger:
+    enabled: false
+    file_path: "bt_trace.json"
+
+#  logger_type: "ZMQ_LOGGER" # deprecated
+
+# Example of loading an action pluging
+#action_plugins:
+# ["libMoveBaseActions_dyn.so"]
+
+

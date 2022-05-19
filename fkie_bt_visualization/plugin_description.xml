@@ -1,0 +1,15 @@
+<library path="lib/libfkie_bt_visualization">
+
+  <class name="fkie_bt_visualization/BehaviorTreeStatusPanel" type="fkie_bt_visualization::BTStatusPanel" base_class_type="rviz::Panel">
+    <description>
+      A panel widget to visualize the current execution state of a Behavior Tree
+    </description>
+  </class>
+
+  <class name="fkie_bt_visualization/BehaviorTreeLoggerPanel" type="fkie_bt_visualization::BTLoggerPanel" base_class_type="rviz::Panel">
+    <description>
+      A panel widget to visualize logs from Behavior Tree running nodes
+    </description>
+  </class>
+
+</library>

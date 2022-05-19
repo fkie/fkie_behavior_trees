@@ -1,0 +1,17 @@
+<root main_tree_to_execute="BehaviorTree">
+  <BehaviorTree ID="BehaviorTree">
+    <Sequence name="Move Base loop">
+      <ParallelNode threshold="1" name="parallel">
+        <RateController hz="2">
+          <Action ID="MoveBase_GetPath" name="MoveBase_GetPath" target_pose="{target_pose}" path="{path}" />
+        </RateController>
+        <RateController hz="5">
+          <FallbackStar name="FallbackExecution">
+            <Action ID="MoveBase_ExePath" name="MB_ExePath" controller="teb" path="{path}" target_pose="{target_pose}"/>
+            <Action ID="MoveBase_Recovery" name="MB_Recovery_clear_CM" strategy="clear_costmap" path="{path}"/>
+          </FallbackStar>
+        </RateController>
+      </ParallelNode>
+    </Sequence>
+  </BehaviorTree>
+</root>

@@ -1,0 +1,32 @@
+tree:
+  rate: 5.0 # rate from main root tree
+  start_tree_at_init: true # Defines if tree must run automatically or wait for start message
+
+# loggin examples
+logging:
+  # RosMsgLogger: Send ros messages with current BT status
+  RosMsgLogger:
+    enabled: true
+    
+  # StdCoutLogger: print BT node transitions to the console
+  StdCoutLogger:
+    enabled: false
+    
+  # PublisherZMQ: allows us to use Groot as monitor tool 
+  PublisherZMQ:
+    enabled: true
+    max_msg_per_second: 25
+    publisher_port: 1666
+    server_port: 1667
+    
+  FileLogger:
+    enabled: false
+    file_path: "bt_trace.fbl"
+    
+  MinitraceLogger:
+    enabled: false
+    file_path: "bt_trace.json"
+
+# load required libraries:
+# Hint: we generate [TutorialActions_dyn] and we can use it as [libTutorialActions_dyn.so]
+action_plugins: ["libTutorialActions_dyn.so"]

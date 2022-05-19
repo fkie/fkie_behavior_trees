@@ -1,0 +1,8 @@
+MoveitActions:
+  planning_group: "arm"
+  execute_trajectory: false
+  ExecuteWaypoints:
+    radius: 0.5
+    x_init: 0.4
+    y_init: 0.0
+    z_init: 1.0

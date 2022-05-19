@@ -1,0 +1,12 @@
+<root main_tree_to_execute="BehaviorTree">
+  <BehaviorTree ID="BehaviorTree">
+    <Sequence name="Main loop">
+      <SetBlackboard output_key="target_pose_3d" value="0.5;0.5;1;0;0;0"/>
+      <Action ID="MoveitMoveToPose" name="MoveitMoveToPose" target_pose_3d="{target_pose_3d}"/>
+      <SetBlackboard output_key="target_pose_3d" value="0;0;1;0;0;0"/>
+      <Action ID="MoveitMoveToPose" name="MoveitMoveToPose" target_pose_3d="{target_pose_3d}"/>
+      <SetBlackboard output_key="target_pose_3d" value="0;0.7;1.5;0;0;0"/>
+      <Action ID="MoveitMoveToPose" name="MoveitMoveToPose" target_pose_3d="{target_pose_3d}"/>
+    </Sequence>
+  </BehaviorTree>
+</root>

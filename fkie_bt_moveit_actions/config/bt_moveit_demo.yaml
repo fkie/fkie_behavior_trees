@@ -1,0 +1,3 @@
+MoveitActions:
+  planning_group: "robot_arm"
+  execute_trajectory: true

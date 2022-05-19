@@ -1,0 +1,16 @@
+tree:
+  static_xml: ""
+  # static_file: ""
+  rate: 10.0
+
+logging:
+  #logger_type: "ZMQ_LOGGER"
+  #logger_type: "MINITRACE_LOGGER"
+  #logger_type: "STD_COUNT_LOGGER"
+  file_logger_path: "bt_trace.fbl"
+  minitrace_logger_path: "/home/garcia/Documents/logging/bt_trace.json"
+  zmq_max_msg_per_second: 25
+
+action_plugins:
+  ["libMoveitActions_dyn.so"]
+  
