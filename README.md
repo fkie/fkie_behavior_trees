@@ -4,10 +4,6 @@
 
 This repository contains packages for executing behavior trees in ROS. It supports navigation and manipulation tasks using [Move Base Flex](http://wiki.ros.org/move_base_flex) and [MoveIt](https://moveit.ros.org/) and also provides RVIZ visualization and debugging tools.
 
-## Getting Started
-
-Documentation and tutorials are available on: [FKIE Behavior Trees wiki](https://gitlab.fkie.fraunhofer.de/cms-npc/fkie_behavior_trees/-/wikis/home)
-
 ## Package Description
 
 - ```fkie_behavior_tree_manager``` interfaces with behavior tree engine
@@ -26,19 +22,11 @@ First you should install dependencies:
 sudo apt install ros-noetic-behaviortree-cpp-v3 ros-noetic-mbf-msgs  qt5-default ros-noetic-moveit-ros ros-noetic-moveit-visual-tools
 ```
 
-If you want to use all packages, you can compile the meta-package `fkie_behavior_trees`:
-
-- Using [rosrepo](https://github.com/fkie/rosrepo)
-
-```
-rosrepo build fkie_behavior_trees
-```
-
-- Using `catkin tools`
+If you want to use all packages, you can compile the meta-package `fkie_behavior_trees`, using [catkin tools](https://catkin-tools.readthedocs.io/en/latest/installing.html)
 
 ```
 cd ros/src
-git clone https://gitlab.fkie.fraunhofer.de/cms-npc/fkie_behavior_trees
+git clone https://github.com/fkie/fkie_behavior_trees
 cd fkie_behavior_trees/fkie_behavior_trees/
 catkin build --this
 ```
@@ -50,12 +38,6 @@ catkin build --this
 ```
 roslaunch fkie_behavior_tree_manager behavior_tree.launch
 ```
-
-- Examples using BTs and Move Base Flex are given on [Tutorial: Interface to Move Base Flex](https://gitlab.fkie.fraunhofer.de/cms-npc/fkie_behavior_trees/-/wikis/7.-Interface-to-Move-Base-Flex)
-
-- Examples using BTs and MoveIt are given on [Tutorial: Interface to MoveIt](https://gitlab.fkie.fraunhofer.de/cms-npc/fkie_behavior_trees/-/wikis/8.-Interface-to-Move-it)
-
-- Examples using Gazebo for both navigation and Arm motions are given on packages [fkie_teodor_simulation](https://gitlab.fkie.fraunhofer.de/cms-simulation/fkie_teodor_simulation) and [fkie_packbot_simulation](https://gitlab.fkie.fraunhofer.de/cms-simulation/fkie_packbot_simulation)
 
 ## Contributors
 
