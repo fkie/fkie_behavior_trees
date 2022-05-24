@@ -40,6 +40,9 @@ catkin build --this
 ```
 roslaunch fkie_behavior_tree_manager behavior_tree.launch
 ```
+- You can also try a demo using a simulated husky robot and navigation, available in [fkie_husky_manipulation_simulation](https://github.com/fkie/fkie_husky_manipulation_simulation)
+
+![navigation_demo](https://user-images.githubusercontent.com/748097/169975809-2f0e1f83-6910-488f-a3f4-27b0a1148389.gif)
 
 ## Authors
 
